@@ -4,7 +4,7 @@ import Header from './components/header';
 import Footer from './components/footer';
 import {useState} from 'react';
 import Cat from './data/cat';
-import CatCard from './components/cat_card'
+import CatCard from './components/cat_card';
 
 function App() {
 	// JavaScript code can be inserted here!
@@ -89,11 +89,12 @@ function App() {
 			<Header />
 
 			<main>
-				<div className='cards__wrapper'>{cats.map(cat => <CatCard 
+				<div className='cards__wrapper'>{cats.map((cat,index) => <CatCard 
 			name={cat.name}
 			species={cat.species}
 			favFoods={cat.favFoods}
 			birthYear={cat.birthYear}
+			catIndex={index}
 		/> )}</div>
 			</main>
 
