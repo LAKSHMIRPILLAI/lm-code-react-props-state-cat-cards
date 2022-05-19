@@ -15,7 +15,7 @@ import CatImage from './cat_image';
 
 
 interface CatCardProps{
-    name: string;
+	name: string;
     species: string;
     favFoods: Array<string>;
     birthYear: number;
