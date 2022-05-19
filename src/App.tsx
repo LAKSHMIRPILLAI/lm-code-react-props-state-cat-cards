@@ -6,6 +6,8 @@ import {useState} from 'react';
 import Cat from './data/cat';
 import CatCard from './components/cat_card';
 
+
+
 function App() {
 	// JavaScript code can be inserted here!
 	const [ cats, setCats ] = useState<Array<Cat>>([
@@ -80,13 +82,24 @@ function App() {
 				 species: 'Tiny Cat',
 				 favFoods: ['milk'],
 				 birthYear: 2021,
-			 }
+			 },
+			 {
+				name: "Captain Catface",
+				species: "Sea Cattain",
+				favFoods: ["fish, rum"],
+				birthYear: 2016,
+			  }
 	 ]);
 	 console.log("Our pretties 😻: ", cats)
+	 const catCount = cats.length;
+	 console.log(catCount)
+	 
+
+
 	return (
 		<>
 			<Navbar />
-			<Header />
+			<Header catCount={catCount}/>
 
 			<main>
 				<div className='cards__wrapper'>{cats.map((cat,index) => <CatCard 
